@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Brand design tokens - usable as Tailwind utilities (bg-blue, text-yellow, ...) */
+@theme {
+  --color-ink: #08101e;
+  --color-blue: #003a80;
+  --color-blue-dark: #002a5e;
+  --color-blue-soft: #e8f0fb;
+  --color-yellow: #ffc100;
+  --color-yellow-dark: #e0a800;
+
+  --font-sans: "Inter", system-ui, Arial, sans-serif;
+
+  --shadow-soft: 0 1px 3px rgba(0, 58, 128, 0.06), 0 8px 24px rgba(0, 58, 128, 0.06);
+  --shadow-lift: 0 12px 40px rgba(0, 58, 128, 0.14), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #334155; /* slate-700 */
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-yellow);
+    color: var(--color-blue-dark);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

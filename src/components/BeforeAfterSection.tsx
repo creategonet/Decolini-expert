@@ -1,24 +1,32 @@
+import { motion } from "motion/react";
 import { beforeAfterPairs } from "../data/siteContent";
 import { BeforeAfterSlider } from "./BeforeAfterSlider";
+import { Container, SectionHeading, staggerContainer, staggerItem } from "./ui";
 
 export function BeforeAfterSection() {
   return (
-    <section className="section section--soft" id="inainte-dupa">
-      <div className="container">
-        <div className="section__header">
-          <p className="eyebrow">Rezultate reale</p>
-          <h2>Diferența se vede imediat</h2>
-          <p className="lead" style={{ marginTop: "12px" }}>
-            Trage cursorul pentru a compara starea căzii înainte și după recondiționare.
-          </p>
-        </div>
+    <section className="bg-slate-50 py-20 sm:py-28" id="inainte-dupa">
+      <Container>
+        <SectionHeading
+          eyebrow="Rezultate reale"
+          title="Diferența se vede imediat"
+          subtitle="Trage cursorul pentru a compara starea căzii înainte și după recondiționare."
+        />
 
-        <div className="ba__grid">
+        <motion.div
+          className="mt-12 grid gap-6 sm:grid-cols-2"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+        >
           {beforeAfterPairs.map((pair) => (
-            <BeforeAfterSlider pair={pair} key={pair.ariaLabel} />
+            <motion.div key={pair.ariaLabel} variants={staggerItem}>
+              <BeforeAfterSlider pair={pair} />
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </Container>
     </section>
   );
 }

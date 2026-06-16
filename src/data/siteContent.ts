@@ -45,7 +45,7 @@ export const navigationItems: NavigationItem[] = [
 
 export const socialProofItems = [
   { text: "100% dintre clienți ne recomandă" },
-  { text: "7 recenzii — toate pozitive" },
+  { text: "7 recenzii - toate pozitive" },
   { text: "3.100+ urmăritori pe Facebook" },
 ];
 
@@ -105,7 +105,7 @@ export const howItWorksSteps: Step[] = [
 ];
 
 export const services: Service[] = [
-  { text: "Recondiționare / reglazurare căzi de baie — strat nou, alb, lucios" },
+  { text: "Recondiționare / reglazurare căzi de baie - strat nou, alb, lucios" },
   { text: "Reparare ciobituri, zgârieturi și fisuri" },
   { text: "Acoperire pete de rugină și suprafețe tocite" },
   { text: "Căzi de fontă, acril și fibră de sticlă" },
@@ -116,29 +116,29 @@ export const beforeAfterPairs: BeforeAfterPair[] = [
   {
     before: "/cada-before-1.jpg",
     after: "/cada-after-1.jpg",
-    beforeAlt: "Cadă înainte de recondiționare — suprafață deteriorată",
-    afterAlt: "Cadă recondiționată — suprafață albă și lucioasă",
+    beforeAlt: "Cadă înainte de recondiționare - suprafață deteriorată",
+    afterAlt: "Cadă recondiționată - suprafață albă și lucioasă",
     ariaLabel: "Compară înainte și după pentru cada 1",
   },
   {
     before: "/cada-before-2.jpg",
     after: "/cada-after-2.jpg",
-    beforeAlt: "Cadă înainte de recondiționare — suprafață deteriorată",
-    afterAlt: "Cadă recondiționată — suprafață albă și lucioasă",
+    beforeAlt: "Cadă înainte de recondiționare - suprafață deteriorată",
+    afterAlt: "Cadă recondiționată - suprafață albă și lucioasă",
     ariaLabel: "Compară înainte și după pentru cada 2",
   },
   {
     before: "/cada-before-3.jpg",
     after: "/cada-after-3.jpg",
-    beforeAlt: "Cadă înainte de recondiționare — suprafață deteriorată",
-    afterAlt: "Cadă recondiționată — suprafață albă și lucioasă",
+    beforeAlt: "Cadă înainte de recondiționare - suprafață deteriorată",
+    afterAlt: "Cadă recondiționată - suprafață albă și lucioasă",
     ariaLabel: "Compară înainte și după pentru cada 3",
   },
   {
     before: "/cada-before-4.jpg",
     after: "/cada-after-4.jpg",
-    beforeAlt: "Cadă înainte de recondiționare — suprafață deteriorată",
-    afterAlt: "Cadă recondiționată — suprafață albă și lucioasă",
+    beforeAlt: "Cadă înainte de recondiționare - suprafață deteriorată",
+    afterAlt: "Cadă recondiționată - suprafață albă și lucioasă",
     ariaLabel: "Compară înainte și după pentru cada 4",
   },
 ];
@@ -167,17 +167,17 @@ export const faqItems: FaqItem[] = [
   {
     question: "Costă mai puțin decât o cadă nouă?",
     answer:
-      "Da, semnificativ mai puțin. Și nu doar la prețul căzii — economisești și demolarea celei vechi, scosul ei pe scări, montarea uneia noi și, de cele mai multe ori, spartul și refacerea gresiei și a faianței din jur. Practic plătești doar recondiționarea, nu o renovare întreagă. Pentru majoritatea clienților, diferența de cost e de câteva ori mai mică.",
+      "Da, semnificativ mai puțin. Și nu doar la prețul căzii - economisești și demolarea celei vechi, scosul ei pe scări, montarea uneia noi și, de cele mai multe ori, spartul și refacerea gresiei și a faianței din jur. Practic plătești doar recondiționarea, nu o renovare întreagă. Pentru majoritatea clienților, diferența de cost e de câteva ori mai mică.",
   },
   {
     question: "Cât rezistă?",
     answer:
-      "Mulți ani la o întreținere normală — vorbim despre o suprafață făcută să țină, nu despre o soluție de moment. La final îți lăsăm și câteva sfaturi simple de curățare (ce produse folosești și ce eviți), ca stratul nou să rămână neted și lucios cât mai mult timp. Cu puțină grijă, uiți că ai avut vreodată o cadă veche.",
+      "Mulți ani la o întreținere normală - vorbim despre o suprafață făcută să țină, nu despre o soluție de moment. La final îți lăsăm și câteva sfaturi simple de curățare (ce produse folosești și ce eviți), ca stratul nou să rămână neted și lucios cât mai mult timp. Cu puțină grijă, uiți că ai avut vreodată o cadă veche.",
   },
   {
     question: "Merge pe orice tip de cadă?",
     answer:
-      "Lucrăm căzi de fontă, acril și fibră de sticlă — cele mai întâlnite tipuri din casele și apartamentele de la noi. Indiferent de material, venim, vedem starea exactă a căzii tale și îți spunem direct și onest dacă merită recondiționată sau nu.",
+      "Lucrăm căzi de fontă, acril și fibră de sticlă - cele mai întâlnite tipuri din casele și apartamentele de la noi. Indiferent de material, venim, vedem starea exactă a căzii tale și îți spunem direct și onest dacă merită recondiționată sau nu.",
   },
   {
     question: "Faceți deplasarea?",

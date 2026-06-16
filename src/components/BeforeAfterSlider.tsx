@@ -1,4 +1,4 @@
-import { useState, useCallback, type CSSProperties, type PointerEvent } from "react";
+import { useState, useCallback, type PointerEvent } from "react";
 import { ArrowLeftRight } from "lucide-react";
 import type { BeforeAfterPair } from "../data/siteContent";
 
@@ -27,13 +27,10 @@ export function BeforeAfterSlider({ pair }: Props) {
 
   const onPointerUp = () => setDragging(false);
 
-  const cssVars = { "--pos": `${pos}%` } as CSSProperties;
-
   return (
-    <article className="compare-card">
+    <article className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[var(--shadow-soft)]">
       <div
-        className={`compare${dragging ? " dragging" : ""}`}
-        style={cssVars}
+        className="relative aspect-[4/3] w-full cursor-ew-resize touch-none select-none"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
@@ -42,34 +39,63 @@ export function BeforeAfterSlider({ pair }: Props) {
         aria-label={pair.ariaLabel}
       >
         {/* After (bottom layer) */}
-        <img className="compare__img" src={pair.after} alt={pair.afterAlt} loading="lazy" draggable={false} />
+        <img
+          src={pair.after}
+          alt={pair.afterAlt}
+          loading="lazy"
+          draggable={false}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
         {/* Before (clipped top layer) */}
-        <div className="compare__before-wrap">
-          <img className="compare__img" src={pair.before} alt={pair.beforeAlt} loading="lazy" draggable={false} />
+        <div
+          className="absolute inset-0 overflow-hidden"
+          style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+        >
+          <img
+            src={pair.before}
+            alt={pair.beforeAlt}
+            loading="lazy"
+            draggable={false}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
         </div>
 
         {/* Labels */}
-        <span className="compare__label compare__label--before" aria-hidden="true">Înainte</span>
-        <span className="compare__label compare__label--after" aria-hidden="true">După</span>
+        <span className="absolute left-3 top-3 rounded-full bg-ink/75 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur">
+          Înainte
+        </span>
+        <span className="absolute right-3 top-3 rounded-full bg-yellow px-3 py-1 text-xs font-bold uppercase tracking-wider text-blue">
+          După
+        </span>
 
-        {/* Drag line */}
-        <span className="compare__line" aria-hidden="true" />
+        {/* Divider line */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 w-0.5 -translate-x-1/2 bg-white shadow-[0_0_0_1px_rgba(0,0,0,0.1)]"
+          style={{ left: `${pos}%` }}
+        />
 
         {/* Handle */}
-        <span className="compare__handle" aria-hidden="true">
+        <span
+          aria-hidden="true"
+          className={`pointer-events-none absolute top-1/2 grid h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white text-blue shadow-lg transition-transform ${
+            dragging ? "scale-110" : ""
+          }`}
+          style={{ left: `${pos}%` }}
+        >
           <ArrowLeftRight size={20} strokeWidth={2.5} />
         </span>
 
         {/* Accessible range fallback */}
         <input
           type="range"
-          className="compare__input"
           min={0}
           max={100}
           value={pos}
           aria-label={pair.ariaLabel}
           onChange={(e) => setPos(Number(e.target.value))}
+          className="absolute inset-x-0 bottom-3 mx-auto w-[85%] cursor-pointer opacity-0 focus-visible:opacity-100"
         />
       </div>
     </article>
