@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-before#1.jpg\" \"cada-before-1.jpg\")",
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-after#1.jpg\" \"cada-after-1.jpg\")",
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-before#2.jpg\" \"cada-before-2.jpg\")",
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-after#2.jpg\" \"cada-after-2.jpg\")",
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-before#3..jpg\" \"cada-before-3.jpg\")",
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-after#3.jpg\" \"cada-after-3.jpg\")",
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-before#4.jpg\" \"cada-before-4.jpg\")",
+      "PowerShell(Rename-Item \"d:\\\\decolini-expert,webpage\\\\public\\\\cada-after#4.jpg\" \"cada-after-4.jpg\")",
+      "Skill(run)",
+      "Skill(run:*)"
+    ]
+  }
+}

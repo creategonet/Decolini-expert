@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../decolini-expert, Copy"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "decolini-expert,webpage"
+	}
+}
