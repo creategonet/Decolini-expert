@@ -45,6 +45,15 @@
     background: var(--color-yellow);
     color: var(--color-blue-dark);
   }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -69,7 +78,7 @@
 }
 
 @theme inline {
-  --font-heading: "Inter", system-ui, Arial, sans-serif;
+  --font-heading: "Sora", "Inter", system-ui, Arial, sans-serif;
   --font-sans: "Inter", system-ui, Arial, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
