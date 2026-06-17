@@ -35,7 +35,7 @@ export function Hero() {
             transition={{ duration: 0.6, ease }}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-yellow" />
-            Recondiționare căzi de baie · Suceava
+            Renovare și recondiționare căzi de baie · Suceava
           </motion.span>
 
           <motion.h1
@@ -55,9 +55,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.16, ease }}
           >
-            Recondiționăm căzi de fontă, acril și fibră de sticlă, fără demolări
-            și fără să-ți stricăm gresia și faianța. Costă mult mai puțin decât o
-            cadă nouă.
+            Renovăm și recondiționăm căzi de baie vechi și căzi de fontă, fără
+            demolări și fără să-ți stricăm gresia și faianța. Costă mult mai
+            puțin decât o cadă nouă.
           </motion.p>
 
           <motion.div

@@ -108,7 +108,7 @@ export const services: Service[] = [
   { text: "Recondiționare / reglazurare căzi de baie - strat nou, alb, lucios" },
   { text: "Reparare ciobituri, zgârieturi și fisuri" },
   { text: "Acoperire pete de rugină și suprafețe tocite" },
-  { text: "Căzi de fontă, acril și fibră de sticlă" },
+  { text: "Renovare căzi de fontă, acril și fibră de sticlă" },
   { text: "(opțional) Schimbare de culoare" },
 ];
 
@@ -187,4 +187,4 @@ export const faqItems: FaqItem[] = [
 ];
 
 export const footerServices =
-  "Recondiționare căzi · Reglazurare căzi · Reparare ciobituri · Acoperire rugină · Căzi fontă · Căzi acril · Căzi fibră de sticlă";
+  "Renovare cadă veche · Recondiționare căzi · Reglazurare căzi · Reparare ciobituri · Acoperire rugină · Căzi fontă · Căzi acril · Căzi fibră de sticlă";
