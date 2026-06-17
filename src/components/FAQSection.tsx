@@ -2,7 +2,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { faqItems } from "../data/siteContent";
+import { PHONE_DISPLAY, PHONE_HREF } from "../lib/constants";
 import { Container, SectionHeading, Reveal } from "./ui";
+import { Link001 } from "./ui/skiper-ui/skiper40";
 
 export function FAQSection() {
   const [open, setOpen] = useState<number | null>(0);
@@ -57,6 +59,16 @@ export function FAQSection() {
               </div>
             );
           })}
+        </Reveal>
+
+        <Reveal className="mt-12 flex flex-col items-center gap-2 text-center">
+          <p className="text-slate-600">Nu ți-am răspuns la întrebare?</p>
+          <Link001
+            href={PHONE_HREF}
+            className="text-xl font-extrabold text-blue"
+          >
+            Sună-ne la {PHONE_DISPLAY}
+          </Link001>
         </Reveal>
       </Container>
     </section>

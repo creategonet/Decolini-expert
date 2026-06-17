@@ -1,5 +1,6 @@
 import { BenefitsSection } from "./components/BenefitsSection";
 import { BeforeAfterSection } from "./components/BeforeAfterSection";
+import { CtaBand } from "./components/CtaBand";
 import { FAQSection } from "./components/FAQSection";
 import { FinalCTASection } from "./components/FinalCTASection";
 import { Footer } from "./components/Footer";
@@ -24,6 +25,7 @@ export function App() {
         <BenefitsSection />
         <HowItWorksSection />
         <ServicesSection />
+        <CtaBand />
         <BeforeAfterSection />
         <TestimonialsSection />
         <FAQSection />

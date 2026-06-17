@@ -157,7 +157,6 @@ export function BenefitsSection() {
             </div>
             <div className="mt-3 flex items-center justify-between">
               <Avatars />
-              <span className="text-xs font-semibold text-slate-500">7 recenzii</span>
             </div>
           </motion.article>
 

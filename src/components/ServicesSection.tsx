@@ -31,7 +31,7 @@ export function ServicesSection() {
         <SectionHeading
           eyebrow="Ce facem"
           title="Serviciile care redau aspectul și confortul căzii tale"
-          subtitle="Treci cu mouse-ul peste fiecare panou pentru a-l deschide."
+          subtitle="Apasă pe fiecare panou pentru a vedea detaliile."
         />
 
         {/* Desktop: expanding accordion gallery */}

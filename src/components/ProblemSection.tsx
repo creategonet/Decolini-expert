@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { DollarSign, Hammer, Wind, AlertTriangle } from "lucide-react";
 import { problemCards } from "../data/siteContent";
 import { Container, Reveal, Eyebrow, staggerContainer, staggerItem } from "./ui";
+import { Link001 } from "./ui/skiper-ui/skiper40";
 
 const ICONS = [
   <DollarSign size={18} key="dollar" />,
@@ -84,6 +85,12 @@ export function ProblemSection() {
               </motion.li>
             ))}
           </motion.ul>
+
+          <Reveal delay={0.2} className="mt-3">
+            <Link001 href="#solutia" className="text-[1.05rem] font-bold text-blue">
+              Vezi cum îți recondiționăm cada
+            </Link001>
+          </Reveal>
         </div>
       </Container>
     </section>

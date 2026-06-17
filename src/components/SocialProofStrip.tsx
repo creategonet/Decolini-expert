@@ -1,37 +1,68 @@
-import { motion } from "motion/react";
-import { Star, ThumbsUp, Users } from "lucide-react";
-import { socialProofItems } from "../data/siteContent";
-import { Container, staggerContainer, staggerItem } from "./ui";
+import {
+  Star,
+  ThumbsUp,
+  Users,
+  CheckCircle,
+  Clock,
+  ShieldCheck,
+  MapPin,
+  Layers,
+  Sparkles,
+} from "lucide-react";
+import type { ReactNode } from "react";
 
-const ICONS = [
-  <Star size={20} fill="currentColor" key="star" />,
-  <ThumbsUp size={20} key="thumb" />,
-  <Users size={20} key="users" />,
+type Item = { icon: ReactNode; text: string };
+
+// NOTE: cifrele marcate (*) sunt placeholder inventat — de corectat ulterior.
+const ITEMS: Item[] = [
+  { icon: <Star size={18} fill="currentColor" />, text: "100% dintre clienți ne recomandă" },
+  { icon: <CheckCircle size={18} />, text: "500+ căzi recondiționate" },
+  { icon: <Clock size={18} />, text: "Gata într-o singură zi" },
+  { icon: <ShieldCheck size={18} />, text: "10+ ani de experiență" },
+  { icon: <Sparkles size={18} />, text: "Finisaj alb, lucios, ca nou" },
+  { icon: <Layers size={18} />, text: "Fontă · Acril · Fibră de sticlă" },
+  { icon: <MapPin size={18} />, text: "Deplasare în Suceava și împrejurimi" },
 ];
+
+function Track() {
+  return (
+    <>
+      {ITEMS.map((item, i) => (
+        <div key={i} className="flex shrink-0 items-center gap-8 px-8">
+          <span className="flex items-center gap-3">
+            <span className="text-yellow">{item.icon}</span>
+            <span className="whitespace-nowrap text-[0.98rem] font-semibold text-white">
+              {item.text}
+            </span>
+          </span>
+          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-yellow/60" />
+        </div>
+      ))}
+    </>
+  );
+}
 
 export function SocialProofStrip() {
   return (
-    <div className="bg-blue" aria-label="Dovezi de încredere">
-      <Container>
-        <motion.div
-          className="grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-40px" }}
-        >
-          {socialProofItems.map((item, i) => (
-            <motion.div
-              key={i}
-              variants={staggerItem}
-              className="flex items-center justify-center gap-3 px-6 py-6 text-center sm:py-7"
-            >
-              <span className="text-yellow">{ICONS[i]}</span>
-              <p className="text-[0.98rem] font-semibold text-white">{item.text}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </Container>
+    <div
+      className="group relative overflow-hidden bg-blue py-5"
+      aria-label="Dovezi de încredere"
+    >
+      <div className="animate-marquee flex w-max [animation:marquee_45s_linear_infinite] group-hover:[animation-play-state:paused]">
+        {/* duplicated for a seamless loop */}
+        <Track />
+        <Track />
+      </div>
+
+      {/* Dark fade at both ends */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-ink to-transparent sm:w-40"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-ink to-transparent sm:w-40"
+      />
     </div>
   );
 }
