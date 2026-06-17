@@ -15,7 +15,7 @@ export function Hero() {
         width={2400}
         height={1350}
         fetchPriority="high"
-        className="absolute inset-0 -z-20 h-full w-full object-cover object-[72%_center]"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[72%_15%]"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.4, ease }}
@@ -44,7 +44,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.08, ease }}
           >
-            Cada ta arată ca nouă,
+            Cada ta arată
+            <br />
+            ca nouă,
             <br />
             <span className="text-yellow">într-o singură zi</span>
           </motion.h1>
