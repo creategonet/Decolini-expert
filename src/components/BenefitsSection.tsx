@@ -14,9 +14,6 @@ import type { ReactNode } from "react";
 import { benefits } from "../data/siteContent";
 import { Container, SectionHeading, staggerContainer, staggerItem } from "./ui";
 
-/* ------------------------------------------------------------------ */
-/* Small building blocks                                               */
-/* ------------------------------------------------------------------ */
 
 const tileBase =
   "relative overflow-hidden rounded-2xl shadow-[var(--shadow-soft)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]";
